@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  images: {
+    unoptimized: true
+  }
+  /* // cannot work with output:export
   async rewrites() {
     return [
       {
@@ -8,7 +12,7 @@ const nextConfig = {
         destination: '/',
       },
     ]
-  },
+  }, */
 };
 
 export default nextConfig;
