@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useCallback } from 'react'
+import React, { useState, Suspense } from 'react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import Tabs, { TabType } from './Tabs'
 import Filter from './Filter'
@@ -14,7 +14,7 @@ const Content = () => {
     return TabType[type as TabType] || TabType.All
   })
 
-  const onTabChange = (tab: TabType) =>{
+  const onTabChange = (tab: TabType) => {
     setActiveTab(tab)
     const params = new URLSearchParams(searchParams.toString())
     params.set('type', tab)
@@ -28,4 +28,12 @@ const Content = () => {
   )
 }
 
-export default Content
+const SuspenseContent = () => {
+  return (
+    <Suspense>
+      <Content />
+    </Suspense>
+  )
+}
+
+export default SuspenseContent
