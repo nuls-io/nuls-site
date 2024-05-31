@@ -1,0 +1,42 @@
+export const NULSExplorer = 'https://nulscan.io/'
+export const NULSWallet = 'https://github.com/nuls-io/nuls-v2/releases'
+export const NULSStaking = 'https://stake.nuls.io/'
+export const POCM = 'https://pocm.nuls.io/pocm'
+export const POCMRegister = 'https://pocm.nuls.io/pocm/Token/NewToken'
+export const Gov = 'https://gov.nuls.io'
+export const GovCouncil = 'https://gov.nuls.io/gov/council'
+export const GovVotingGuide = 'https://docs.nuls.io/Guide/g_governance.html'
+export const GovProposal = 'https://gov.nuls.io/gov/proposal'
+export const GovCreateProposal = 'https://gov.nuls.io/gov/proposal/createProposal'
+
+export const NaboxWallet = 'https://nabox.io'
+export const NaboxChrome = 'https://chrome.google.com/webstore/detail/nabox-wallet/nknhiehlklippafakaeklbeglecifhad'
+export const ENULSExplorer = 'https://evmscan.nuls.io/'
+export const ENULSNode = 'https://evmapi.nuls.io/'
+export const ENULSNode2 = 'https://evmapi2.nuls.io/'
+export const ChainList = 'https://chainlist.org/?search=enuls'
+export const ENULSBetaSNode = 'https://beta.evmapi.nuls.io/'
+export const ENULSBetaExplorer = 'https://beta.evmscan.nuls.io/'
+export const ENULSFaucet = 'https://faucet.nuls.io/'
+
+export const NERVENetwork = 'https://nerve.network/'
+
+export const NODEGuide = 'https://docs.nuls.io/Guide/g_create_node.html'
+export const WhitePaper = 'https://nuls.io/wp-content/uploads/2023/02/NULS_WhitePaper_v2.1_EN.pdf'
+export const Blog = 'https://forum.nuls.io/'
+export const Youtube = 'https://www.youtube.com/@NULSBlockchain'
+
+export const Github = 'https://github.com/nuls-io'
+export const BrandAssets = 'https://nuls.io/brand-assets'
+export const Documentation = 'https://docs.nuls.io/'
+
+export const Discord = 'https://discord.gg/aRCwbj47WN'
+export const Telegram = 'https://t.me/Nulsio'
+export const Twitter = 'https://twitter.com/Nuls'
+export const Reddit = 'https://www.reddit.com/r/nulsservice/'
+export const Facebook = 'https://www.facebook.com/nulscommunity'
+
+export const GetInTouch = 'mailto:contact@nuls.io'
+
+export const writeProposals = 'https://forum.nuls.io/c/governance/24'
+export const writeAProposal = 'https://forum.nuls.io/c/governance/nuls-proposals'
