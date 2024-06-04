@@ -23,12 +23,14 @@ export const NERVENetwork = 'https://nerve.network/'
 
 export const NODEGuide = 'https://docs.nuls.io/Guide/g_create_node.html'
 export const WhitePaper = 'https://nuls.io/wp-content/uploads/2023/02/NULS_WhitePaper_v2.1_EN.pdf'
-export const Blog = 'https://forum.nuls.io/'
+export const Blog = 'https://nuls.medium.com/'
 export const Youtube = 'https://www.youtube.com/@NULSBlockchain'
+export const Forum = 'https://forum.nuls.io/'
 
 export const Github = 'https://github.com/nuls-io'
 export const BrandAssets = 'https://nuls.io/brand-assets'
 export const Documentation = 'https://docs.nuls.io/'
+export const ENULSDoc = 'https://docs.nuls.io/ENULS/'
 
 export const Discord = 'https://discord.gg/aRCwbj47WN'
 export const Telegram = 'https://t.me/Nulsio'
@@ -40,3 +42,5 @@ export const GetInTouch = 'mailto:contact@nuls.io'
 
 export const writeProposals = 'https://forum.nuls.io/c/governance/24'
 export const writeAProposal = 'https://forum.nuls.io/c/governance/nuls-proposals'
+
+export const Nulswap = 'https://nulswap.com/'

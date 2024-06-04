@@ -92,7 +92,7 @@ function Ambassador() {
           </Button>
         </div>
         <section className="mb-[108px] lg:mb-20">
-          <div className="grid grid-cols-4 gap-x-6 gap-y-[65px] lg:grid-cols-2 lg:gap-x-4 lg:gap-y-8">
+          <div className="grid grid-cols-4 gap-x-6 gap-y-[65px] lg:grid-cols-3 sm:grid-cols-2 lg:gap-x-4 lg:gap-y-8">
             {ambassadors.map(v => (
               <Item key={v.name} {...v} />
             ))}
@@ -100,7 +100,7 @@ function Ambassador() {
         </section>
         <section className="mb-[108px]  lg:mb-20">
           <h3 className="text-32 pb-10 font-medium lg:text-2xl lg:pb-6">NULS Councillors</h3>
-          <div className="grid grid-cols-4 gap-x-6 gap-y-[65px] lg:grid-cols-2 lg:gap-x-4 lg:gap-y-8">
+          <div className="grid grid-cols-4 gap-x-6 gap-y-[65px] lg:grid-cols-3 sm:grid-cols-2 lg:gap-x-4 lg:gap-y-8">
             {councillors.map(v => (
               <Item key={v.name} {...v} />
             ))}
@@ -108,7 +108,7 @@ function Ambassador() {
         </section>
         <section>
           <h3 className="text-32 pb-10 font-medium lg:text-2xl lg:pb-6">Global Team</h3>
-          <div className="grid grid-cols-4 gap-x-6 gap-y-[65px] lg:grid-cols-2 lg:gap-x-4 lg:gap-y-8">
+          <div className="grid grid-cols-4 gap-x-6 gap-y-[65px] lg:grid-cols-3 sm:grid-cols-2 lg:gap-x-4 lg:gap-y-8">
             {globalTeams.map(v => (
               <Item key={v.name} {...v} />
             ))}

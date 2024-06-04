@@ -1,0 +1,16 @@
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 350ms ease;
+}
+
+.collapsing.collapse-horizontal {
+  width: 0;
+  height: auto;
+  transition: width 350ms ease;
+}
+
+.collapse-hide {
+  display: none;
+}

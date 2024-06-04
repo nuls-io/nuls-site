@@ -70,7 +70,7 @@ const items = [
 
 function Features() {
   return (
-    <section className="py-[130px] bg-sub lg:py-[74] lg:px-6">
+    <section className="py-[130px] bg-sub lg:py-[74px] lg:px-6">
       <div className="wrap">
         {items.map(item => <Item key={item.title} {...item} />)}
         {/* <div className="flex border border-text rounded-lg overflow-hidden">

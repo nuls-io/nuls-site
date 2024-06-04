@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Inter, Roboto_Mono, Roboto_Flex } from 'next/font/google'
-import Head from 'next/head'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
   title: 'NULS - Making It Easier To Innovate',
   description:
     'Reach new heights with NULS With innovation and blockchain expertise, the NULS platform empowers you to employ advanced technologies and develop that market-leading product.',
-  icons: [{ rel: "icon", url: "/icon.svg" }]
+  icons: [{ rel: 'icon', url: '/icon.svg' }]
 }
 
 export default function RootLayout({

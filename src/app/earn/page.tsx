@@ -128,23 +128,23 @@ export default function EarnPage() {
           <p className="w-[484px] text-center text-sub text-sm mt-[48px] mb-[72px] lg:w-full lg:my-10">
             Node operation requires use of the full node wallet. Operate a NULS
             Masternode or have one hosted by our partners at{' '}
-            <span>NodeForge.io</span>
+            <a href="https://nodeforge.io/" target="_blank" className="underline underline-offset-2">NodeForge.io</a>
           </p>
           <div className="lg:w-full">
             <Button
               href={NODEGuide}
-              className="w-[266px] mr-6 lg:w-full lg:mr-0 lg:mb-3"
+              className="w-[266px] mr-6 lg:w-full lg:mr-0"
               px="px-0"
               py="py-[19.5px] lg:py-1">
               Node Guide
             </Button>
-            <Button
+            {/* <Button
               href={NODEGuide}
               className="w-[252px] lg:w-full"
               px="px-0"
               py="py-[19.5px] lg:py-1">
               Manual Guide
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>

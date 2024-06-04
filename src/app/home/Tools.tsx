@@ -5,14 +5,18 @@ import Image from 'next/image'
 import clsx from 'clsx'
 import Button from '@/components/Button'
 import ExpandIcon from '@/components/ExpandIcon'
+import Collapse from '@/components/Collapse'
+import useMobile from '@/hooks/useMobile'
+import { Forum, NERVENetwork, NULSExplorer, Nulswap } from '@/constants/links'
 
 type ITool = {
   title: string
   src: string
   desc: string
   path: string
+  isMobile: boolean
 }
-const Tool: FC<ITool> = ({ title, src, desc, path }) => {
+const Tool: FC<ITool> = ({ title, src, desc, path, isMobile }) => {
   const [expand, setExpand] = useState(false)
   return (
     <div className="p-6 pt-8 pr-9 bg-[#262628B2] w-[328px] h-[229px] rounded-lg mr-6 shrink-0 lg:w-full lg:h-auto lg:p-6 lg:mb-3 lg:mr-0">
@@ -26,23 +30,43 @@ const Tool: FC<ITool> = ({ title, src, desc, path }) => {
           </div>
           <ExpandIcon expand={expand} setExpand={setExpand} />
         </div>
-        <div
-          className={clsx(
-            'flex-1 flex flex-col justify-between overflow-hidden lg:flex-initial lg:h-auto lg:duration-300',
-            expand ? 'lg:max-h-[150px]' : 'lg:max-h-0'
-          )}>
-          <p className="text-sm text-white mt-5 lg:mb-3">{desc}</p>
-          <div>
-            <Button
-              title="Learn More"
-              href={path}
-              className="text-base w-[140px] lg:text-sm"
-              px="px-0"
-              py="py-[8.5px] lg:py-1"
-              font="text-base"
-            />
+        {!isMobile ? (
+          <div
+            className={clsx(
+              'flex-1 flex flex-col justify-between overflow-hidden lg:hidden',
+            )}>
+            <p className="text-sm text-white mt-5 lg:mb-3">{desc}</p>
+            <div>
+              <Button
+                title="Learn More"
+                href={path}
+                className="text-base w-[140px] lg:text-sm"
+                px="px-0"
+                py="py-[8.5px] lg:py-1"
+                font="text-base"
+              />
+            </div>
           </div>
-        </div>
+        ) : (
+          <Collapse visible={expand} className="hidden lg:block">
+            <div
+              className={clsx(
+                'flex-1 overflow-hidden',
+              )}>
+              <p className="text-sm text-white mt-5 mb-3">{desc}</p>
+              <div>
+                <Button
+                  title="Learn More"
+                  href={path}
+                  className="w-[140px]"
+                  px="px-0"
+                  py="py-1"
+                  font="text-sm"
+                />
+              </div>
+            </div>
+          </Collapse>
+        )}
       </div>
     </div>
   )
@@ -56,10 +80,10 @@ const tools = [
     path: '/'
   },
   {
-    title: 'Staking',
+    title: 'Earn',
     src: '/home/icon-Staking.png',
     desc: 'Stake your NULS with the project you like and start earning project tokens.',
-    path: 'https://pocm.nuls.io/pocm/Projects/ProjectsList'
+    path: '/earn'
   },
   {
     title: 'Wallets',
@@ -71,25 +95,25 @@ const tools = [
     title: 'NerveNetwork',
     src: '/home/icon-Nerve.png',
     desc: 'NULS ecosystem DeFi hub for token swapping, bridging, yielding, and more.',
-    path: 'https://nerve.network/'
+    path: NERVENetwork
   },
   {
     title: 'Nulswap',
     src: '/home/icon-Nulswap.png',
     desc: 'AMM protocol with AI staking feature built on NULS.',
-    path: 'https://nulswap.com/'
+    path: Nulswap
   },
   {
     title: 'Explorer',
     src: '/home/icon-Explorer.png',
     desc: 'NULS dashboard for transaction tracking, block information, address lookup, and more.',
-    path: 'https://nulscan.io/'
+    path: NULSExplorer
   },
   {
     title: 'Forum',
     src: '/home/icon-Forum.png',
     desc: 'Get the latest NULS technical and community updates.',
-    path: 'https://forum.nuls.io/'
+    path: Forum
   },
   {
     title: 'Explorer More',
@@ -100,6 +124,7 @@ const tools = [
 ]
 
 function Tools() {
+  const { isMobile } = useMobile()
   const scrollRef = useRef<HTMLDivElement>(null)
 
   const [cur, setCur] = useState(0)
@@ -120,7 +145,7 @@ function Tools() {
   const translateXPath = 328 + 24
   const maxCur = tools.length - 1 - 2
   return (
-    <section className="h-[950px] bg-[url('/home/home2.jpg')] bg-center bg-cover bg-no-repeat overflow-hidden lg:bg-text lg:h-auto lg:bg-[url('/home/home2-mobile.png')] lg:bg-top lg:bg-contain lg:px-6 lg:pb-10">
+    <section className="h-[950px] bg-[url('/home/home2.jpg')] bg-center bg-cover bg-no-repeat overflow-hidden lg:bg-text lg:h-auto lg:bg-[url('/home/home2-mobile.png')] lg:bg-top lg:bg-[length:100%_auto] lg:px-6 lg:pb-10">
       <div className="pt-[346px] mb-[57px] flex justify-center lg:pt-[192px] lg:mb-[138px]">
         <Image src="/home/home3.png" width={260} height={116} alt="" />
       </div>
@@ -169,7 +194,7 @@ function Tools() {
 
         <div className="flex duration-300 lg:flex-wrap" ref={scrollRef}>
           {tools.map(v => (
-            <Tool key={v.title} {...v} />
+            <Tool key={v.title} {...v} isMobile={isMobile} />
           ))}
         </div>
       </div>

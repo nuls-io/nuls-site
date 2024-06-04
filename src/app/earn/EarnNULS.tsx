@@ -34,7 +34,7 @@ function EarnItem(props: ItemProps) {
 
 const items = [
   { title: 'Consensus Staking', desc: 'Stake your NULS on Consensus', link: NULSStaking },
-  { title: 'SCO Staking', desc: 'Stake your NULS with SCO projects and earn the project tokens instead of NULS', link: POCM },
+  { title: 'SCO Staking', desc: 'Stake your NULS with SCO projects and earn the project tokens instead of NULS', link: '/sco' },
   { title: '3rd Party Staking', desc: 'NULS can also be used with 3rd party platforms to earn', link: '/ecosystem?type=Staking' },
 ]
 

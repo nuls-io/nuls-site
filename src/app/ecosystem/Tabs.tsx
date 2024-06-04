@@ -16,7 +16,7 @@ export enum TabType {
 
 const tabs = [
   { type: TabType.All, label: 'All' },
-  { type: TabType.Wallets, label: 'Wallet' },
+  { type: TabType.Wallets, label: 'Wallets' },
   { type: TabType.DeFi, label: 'DeFi' },
   { type: TabType.Staking, label: 'Staking' },
   { type: TabType['Infra&Tools'], label: 'Infra&Tools' },

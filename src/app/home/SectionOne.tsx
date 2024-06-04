@@ -12,7 +12,7 @@ function SectionOne() {
           <span className="text-special">for AI</span>
         </h1>
         <div className="flex pt-[28px] lg:pt-[76px] lg:flex-col lg:mx-[3%]">
-          <Button href="" title="Launch App" className="mr-4 lg:mr-0 lg:mb-4 lg:py-3" py="" />
+          <Button href="" title="Launch App" className="mr-4 lg:mr-0 lg:mb-4 lg:py-3" />
           <Button href="" title="Our Vision" type="default" className="lg:py-3" />
         </div>
       </div>

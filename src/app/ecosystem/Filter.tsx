@@ -5,6 +5,8 @@ import Image from 'next/image'
 import items from './ecosystemItems'
 import clsx from 'clsx'
 import ExpandIcon from '@/components/ExpandIcon'
+import Collapse from '@/components/Collapse'
+import useMobile from '@/hooks/useMobile'
 import { TabType } from './Tabs'
 
 type IProps = {
@@ -12,9 +14,10 @@ type IProps = {
   name: string
   desc: string
   link: string
+  isMobile: boolean
 }
 const Item = (props: IProps) => {
-  const { src, name, desc, link } = props
+  const { src, name, desc, link, isMobile } = props
   const [expand, setExpand] = useState(false)
   return (
     <div className="h-[350px] p-8 pb-[26px] border border-text rounded-lg flex flex-col justify-between lg:h-auto lg:p-4">
@@ -27,27 +30,41 @@ const Item = (props: IProps) => {
             {name}
           </h3>
         </div>
-        <ExpandIcon color='bg-text' expand={expand} setExpand={setExpand} />
+        <ExpandIcon color="bg-text" expand={expand} setExpand={setExpand} />
       </div>
-      <div
-        className={clsx(
-          'flex-1 flex flex-col justify-between lg:block lg:overflow-hidden lg:duration-300',
-          expand ? 'lg:max-h-[180px]' : 'lg:max-h-0'
-        )}>
-        <p className="text-sm lg:py-4">{desc}</p>
-        <a
-          className="font-bold text-lg text-special"
-          href={link}
-          target="_blank">
-          Learn More
-        </a>
-      </div>
+      {!isMobile ? (
+        <div
+          className={clsx(
+            'flex-1 flex flex-col justify-between lg:hidden'
+          )}>
+          <p className="text-sm lg:py-4">{desc}</p>
+          <a
+            className="font-bold text-lg text-special"
+            href={link}
+            target="_blank">
+            Learn More
+          </a>
+        </div>
+      ) : (
+        <Collapse visible={expand} className="hidden lg:block">
+          <div className={clsx('flex-1 flex flex-col justify-between')}>
+            <p className="text-sm lg:py-4">{desc}</p>
+            <a
+              className="font-bold text-lg text-special"
+              href={link}
+              target="_blank">
+              Learn More
+            </a>
+          </div>
+        </Collapse>
+      )}
     </div>
   )
 }
 
 const Filter = ({ activeTab }: { activeTab: TabType }) => {
-  const [list, setList] = useState<IProps[]>([])
+  const { isMobile } = useMobile()
+  const [list, setList] = useState<Omit<IProps, 'isMobile'>[]>([])
   useEffect(() => {
     if (activeTab === TabType.All) {
       const list = items.map(v => ({
@@ -67,7 +84,7 @@ const Filter = ({ activeTab }: { activeTab: TabType }) => {
   return (
     <div className="grid grid-cols-4 gap-6 pt-9 lg:grid-cols-1 lg:pt-5">
       {list.map(item => (
-        <Item key={item.name} {...item} />
+        <Item key={item.name} {...item} isMobile={isMobile} />
       ))}
     </div>
   )

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import clsx from 'clsx'
 
 export const metadata: Metadata = {
   title: 'Partners - Trusted by our partners and collaborators',
@@ -9,40 +10,99 @@ export const metadata: Metadata = {
 
 export default function PartnersPage() {
   const investors = [
-    { src: '/partners/investor1.png', href: '' },
-    { src: '/partners/investor2.png', href: '' },
-    { src: '/partners/investor3.png', href: '' },
-    { src: '/partners/investor4.png', href: '' },
-    { src: '/partners/investor5.png', href: '' },
-    { src: '/partners/investor6.png', href: '' },
-    { src: '/partners/investor7.png', href: '' },
-    { src: '/partners/investor8.png', href: '' },
-    { src: '/partners/investor9.png', href: '' },
-    { src: '/partners/investor10.png', href: '' }
+    { src: '/partners/investers/BITMAIN.svg', href: '' },
+    { src: '/partners/investers/DWF.svg', href: '' },
+    { src: '/partners/investers/Ulysses.png', href: '' },
+    { src: '/partners/investers/ChainCapital.svg', href: '' },
+    { src: '/partners/investers/Waterdrip.svg', href: '' }
+  ]
+  const strategicPartners = [
+    { src: '/partners/strategic-partners/NERVE.svg', href: '' },
+    { src: '/partners/strategic-partners/Nabox.png', href: '' },
+    { src: '/partners/strategic-partners/Ape.svg', href: '' },
+    { src: '/partners/strategic-partners/Suisse.svg', href: '' },
+    { src: '/partners/strategic-partners/Gecko.svg', href: '' },
+    { src: '/partners/strategic-partners/CMC.svg', href: '' },
+    { src: '/partners/strategic-partners/CoinGecko.svg', href: '' },
+    { src: '/partners/strategic-partners/Chainlink.svg', href: '' },
+    { src: '/partners/strategic-partners/Certik.svg', href: '' },
+    { src: '/partners/strategic-partners/ankr.svg', href: '' }
   ]
   const exchanges = [
-    { src: '/partners/exchange1.png', href: '' },
-    { src: '/partners/exchange2.png', href: '' },
-    { src: '/partners/exchange3.png', href: '' },
-    { src: '/partners/exchange4.png', href: '' },
-    { src: '/partners/exchange5.png', href: '' },
-    { src: '/partners/exchange6.png', href: '' },
-    { src: '/partners/exchange7.png', href: '' },
-    { src: '/partners/exchange8.png', href: '' },
-    { src: '/partners/exchange9.png', href: '' },
-    { src: '/partners/exchange10.png', href: '' },
-    { src: '/partners/exchange11.png', href: '' },
-    { src: '/partners/exchange12.png', href: '' },
-    { src: '/partners/exchange13.png', href: '' },
-    { src: '/partners/exchange14.png', href: '' },
-    { src: '/partners/exchange15.png', href: '' },
-    { src: '/partners/exchange16.png', href: '' },
-    { src: '/partners/exchange17.png', href: '' },
-    { src: '/partners/exchange18.png', href: '' },
-    { src: '/partners/exchange19.png', href: '' },
-    { src: '/partners/exchange20.png', href: '' },
-    { src: '/partners/exchange21.png', href: '' },
-    { src: '/partners/exchange22.png', href: '' },
+    { src: '/partners/exchanges/Binance.svg', href: '' },
+    { src: '/partners/exchanges/OKX.svg', href: '' },
+    { src: '/partners/exchanges/Gate.svg', href: '' },
+    { src: '/partners/exchanges/HTX.svg', href: '' },
+    { src: '/partners/exchanges/BingX.svg', href: '' },
+    { src: '/partners/exchanges/bitvavo.svg', href: '' },
+    { src: '/partners/exchanges/MEXC.svg', href: '' },
+    { src: '/partners/exchanges/BitMart.svg', href: '' },
+    { src: '/partners/exchanges/CoinEx.svg', href: '' },
+    { src: '/partners/exchanges/NovaDAX.svg', href: '' },
+    { src: '/partners/exchanges/SwapBox.svg', href: '' },
+    { src: '/partners/exchanges/NERVESWAP.svg', href: '' },
+    { src: '/partners/exchanges/Nulswap.svg', href: '' },
+    { src: '/partners/exchanges/PheasantSwap.svg', href: '' },
+    { src: '/partners/exchanges/PancakeSwap.svg', href: '' },
+    { src: '/partners/exchanges/DODO.svg', href: '' },
+    { src: '/partners/exchanges/SWFT.svg', href: '' }
+  ]
+  const crossChainSupport = [
+    { src: '/partners/cross-chain-support/bitcoin.svg', href: '' },
+    { src: '/partners/cross-chain-support/Ethereum.svg', href: '' },
+    { src: '/partners/cross-chain-support/BNBChain.svg', href: '' },
+    { src: '/partners/cross-chain-support/Polygon.svg', href: '' },
+    { src: '/partners/cross-chain-support/OKX.svg', href: '' },
+    { src: '/partners/cross-chain-support/Avalanche.svg', href: '' },
+    { src: '/partners/cross-chain-support/Arbi.svg', href: '' },
+    { src: '/partners/cross-chain-support/Harmony.svg', href: '' },
+    { src: '/partners/cross-chain-support/KCC.svg', href: '' },
+    { src: '/partners/cross-chain-support/Cronos.svg', href: '' },
+    { src: '/partners/cross-chain-support/Fantom.svg', href: '' },
+    { src: '/partners/cross-chain-support/TRON.svg', href: '' },
+    { src: '/partners/cross-chain-support/Metis.svg', href: '' },
+    { src: '/partners/cross-chain-support/IoTeX.svg', href: '' },
+    { src: '/partners/cross-chain-support/Klaytn.svg', href: '' },
+    { src: '/partners/cross-chain-support/smartBCH.svg', href: '' },
+    { src: '/partners/cross-chain-support/Op.svg', href: '' },
+    { src: '/partners/cross-chain-support/kava.svg', href: '' },
+    { src: '/partners/cross-chain-support/EthereumPoW.svg', href: '' },
+    { src: '/partners/cross-chain-support/ENULS.svg', href: '' },
+    { src: '/partners/cross-chain-support/REI.svg', href: '' },
+    { src: '/partners/cross-chain-support/zkSync.svg', href: '' },
+    { src: '/partners/cross-chain-support/EOSEVM.svg', href: '' },
+    { src: '/partners/cross-chain-support/polygonzkEVM.svg', href: '' },
+    { src: '/partners/cross-chain-support/Linea.svg', href: '' },
+    { src: '/partners/cross-chain-support/CELO.svg', href: '' },
+    { src: '/partners/cross-chain-support/EthereumClassic.svg', href: '' },
+    { src: '/partners/cross-chain-support/BASE.svg', href: '' },
+    { src: '/partners/cross-chain-support/Scroll.svg', href: '' },
+    { src: '/partners/cross-chain-support/Bitgert.svg', href: '' },
+    { src: '/partners/cross-chain-support/Manta.svg', href: '' },
+    { src: '/partners/cross-chain-support/Zeta.svg', href: '' },
+    { src: '/partners/cross-chain-support/XLayer.svg', href: '' },
+    { src: '/partners/cross-chain-support/Shardeum.svg', href: '' },
+    { src: '/partners/cross-chain-support/MODE.svg', href: '' },
+    { src: '/partners/cross-chain-support/Blast.svg', href: '' },
+    { src: '/partners/cross-chain-support/Merlin.svg', href: '' },
+    { src: '/partners/cross-chain-support/Pulse.svg', href: '' },
+    { src: '/partners/cross-chain-support/FREECASH.svg', href: '' },
+    { src: '/partners/cross-chain-support/HECO.svg', href: '' },
+    
+    { src: '/partners/cross-chain-support/NERVE.svg', href: '' }
+  ]
+  const partners = [
+    { title: 'Investers', items: investors },
+    { title: 'Strategic Partners', items: strategicPartners },
+    {
+      title: 'Exchange/Liquidity',
+      items: exchanges,
+      titleClass: 'lg:break-all'
+    },
+    {
+      title: 'Cross-Chain Support',
+      items: crossChainSupport
+    }
   ]
   return (
     <>
@@ -56,42 +116,34 @@ export default function PartnersPage() {
 
       <section className="bg-sub py-[140px] lg:py-[76px] lg:px-6">
         <div className="wrap">
-          <h3 className="text-[40px] leading-[50px] font-medium text-center mb-20 lg:text-32 lg:mb-10">
-            Strategic Investors
-          </h3>
-          <div className="grid grid-cols-5 gap-3 mb-40 lg:grid-cols-2 lg:mb-20">
-            {investors.map(investor => (
+          {partners.map((partner, i) => (
+            <div key={i}>
+              <h3
+                className={clsx(
+                  'text-[40px] leading-[50px] font-medium text-center mb-20 lg:text-32 lg:mb-10',
+                  partner.titleClass
+                )}>
+                {partner.title}
+              </h3>
               <div
-                key={investor.src}
-                className="border border-text rounded-lg h-[99px] lg:h-[60px]">
-                <Image
-                  src={investor.src}
-                  width={625}
-                  height={313}
-                  alt=""
-                  className="w-full h-full"
-                />
+                className={clsx(
+                  'grid grid-cols-5 gap-3 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2',
+                  i === partners.length - 1 ? '' : 'mb-40 lg:mb-20'
+                )}>
+                {partner.items.map(item => (
+                  <div key={item.src}>
+                    <Image
+                      src={item.src}
+                      width={226}
+                      height={99}
+                      alt=""
+                      className="w-full"
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <h3 className="text-[40px] leading-[50px] font-medium text-center mb-20 lg:text-32 lg:mb-10 lg:break-all">
-            Exchange/Liquidity
-          </h3>
-          <div className="flex justify-center gap-3 flex-wrap lg:grid lg:grid-cols-2">
-            {exchanges.map(exchange => (
-              <div
-                key={exchange.src}
-                className="border border-text rounded-lg h-[99px] w-[226px] lg:w-full lg:h-[60px]">
-                <Image
-                  src={exchange.src}
-                  width={625}
-                  height={313}
-                  alt=""
-                  className="w-full h-full"
-                />
-              </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
     </>

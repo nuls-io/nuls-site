@@ -5,7 +5,8 @@ import {
   PropsWithChildren,
   useState,
   ComponentProps,
-  useEffect
+  useEffect,
+  useRef
 } from 'react'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -79,7 +80,10 @@ export const MenuItem: FC<IProps> = ({
 
 export const SubMenu: FC<PropsWithChildren<Omit<IProps, 'href'>>> = props => {
   const { children, label, ...rest } = props
+  const wrapRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname()
+  const [expandHeight, setExpandHeight] = useState(0)
   const [expand, setExpand] = useState(false)
   const onMouseOver = () => {
     if (document.documentElement.clientWidth > 1200) {
@@ -91,6 +95,16 @@ export const SubMenu: FC<PropsWithChildren<Omit<IProps, 'href'>>> = props => {
       setExpand(false)
     }
   }
+
+  useEffect(() => {
+    if (wrapRef.current) {
+      wrapRef.current.style.overflow = expand ? 'initial' :' hidden'
+    }
+    if (contentRef.current) {
+      setExpandHeight(expand ? contentRef.current.scrollHeight : 0)
+    }
+  }, [expand])
+
   useEffect(() => {
     setExpand(false)
   }, [pathname])
@@ -99,6 +113,7 @@ export const SubMenu: FC<PropsWithChildren<Omit<IProps, 'href'>>> = props => {
       className={clsx('relative flex-1 lg:overflow-hidden')}
       onMouseOver={onMouseOver}
       onMouseLeave={onMouseLeave}
+      ref={wrapRef}
       >
       <div className="relative hover:text-white" onClick={() => setExpand(expand => !expand)}>
         <div
@@ -132,9 +147,11 @@ export const SubMenu: FC<PropsWithChildren<Omit<IProps, 'href'>>> = props => {
       </div>
 
       <div
+        ref={contentRef}
+        style={{ height: expandHeight + 'px' }}
         className={clsx(
           'duration-300',
-          expand ? 'h-[248px] opacity-100' : 'h-0 opacity-0'
+          expand ? 'opacity-100' : 'opacity-0'
         )}>
         <div className="h-2 bg-[transparent]"></div>
         <div

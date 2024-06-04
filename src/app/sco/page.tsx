@@ -38,10 +38,10 @@ export default function SCOPage() {
               consensus rewards to bootstrap and help fund development. Unlike
               IEOs and ICOs, stakers never risk their principal, and NULS never
               leave their wallet. Earn project tokens without risk while your
-              device is off! 
+              device is off!
             </p>
             <div>
-              <Button href={POCM} className="w-[195px] mr-6 lg:w-full lg:mr-0 lg:mb-3" py="lg:py-3">
+              <Button href={POCM} className="w-[195px] mr-6 lg:w-full lg:mr-0 lg:mb-3 lg:py-3">
                 Stake Now
               </Button>
               <Button

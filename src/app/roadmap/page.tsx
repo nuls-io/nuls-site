@@ -36,7 +36,7 @@ const RoadItem: React.FC<IRoadItem> = props => {
   const { year, items } = props
   return (
     <div className="mb-[80px] lg:mb-10">
-      <h3 className="text-32px mb-[30px] font-medium lg:text-center lg:font-bold lg:text-2xl">
+      <h3 className="text-32 mb-[30px] font-medium lg:text-center lg:font-bold lg:text-2xl">
         {year}
       </h3>
       {items.length === 1 ? (
@@ -45,7 +45,7 @@ const RoadItem: React.FC<IRoadItem> = props => {
           <p>{items[0].desc}</p>
         </div>
       ) : (
-        <div className="grid grid-cols-4 gap-6 lg:grid-cols-1 lg:gap-4">
+        <div className="grid grid-cols-4 gap-6 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:gap-4">
           {items.map((item, index) => (
             <div
               className={clsx(

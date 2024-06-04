@@ -4,6 +4,7 @@ import {
   WhitePaper,
   Blog,
   Youtube,
+  Forum,
   NULSExplorer,
   ENULSExplorer,
   Github,
@@ -37,6 +38,10 @@ const linkConfig: IConfig[] = [
       {
         label: 'Youtube',
         path: Youtube
+      },
+      {
+        label: 'Forum',
+        path: Forum
       }
     ]
   },

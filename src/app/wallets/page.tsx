@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { NULSWallet, NaboxWallet } from '@/constants/links'
+import Wallets from './Wallets'
+// import { NULSWallet, NaboxWallet } from '@/constants/links'
 
 export const metadata: Metadata = {
   title: 'NULS Wallet',
@@ -23,11 +24,13 @@ export default function WalletsPage() {
             third-party wallet you are responsible for the safety of your
             private key.
           </p>
-          <div className="flex overflow-hidden lg:flex-wrap">
+
+          <Wallets />
+          {/* <div className="flex overflow-hidden lg:flex-wrap">
             <div className="flex flex-col border border-text rounded-lg w-[384px] h-[471px] mr-[64px] overflow-hidden lg:w-full lg:mr-0 lg:mb-6 lg:h-[400px]">
               <div className="h-[276px] bg-text flex justify-center items-center lg:h-[220px]">
                 <Image
-                  src="/wallets/NULS.png"
+                  src="/wallets/NULS.svg"
                   width={213}
                   height={213}
                   alt=""
@@ -50,7 +53,7 @@ export default function WalletsPage() {
             <div className="flex flex-col border border-text rounded-lg w-[384px] h-[471px] overflow-hidden lg:w-full lg:h-[400px]">
               <div className="h-[276px] bg-custom-gradient flex justify-center items-center lg:h-[220px]">
                 <Image
-                  src="/wallets/Nabox.png"
+                  src="/wallets/Nabox.svg"
                   width={213}
                   height={213}
                   alt=""
@@ -68,7 +71,7 @@ export default function WalletsPage() {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
