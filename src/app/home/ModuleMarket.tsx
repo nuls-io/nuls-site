@@ -1,4 +1,5 @@
 import React from 'react'
+import SectionBgWrapper from '@/components/SectionBgWrapper'
 import Button from '@/components/Button'
 
 type IDataItem = {
@@ -29,13 +30,16 @@ export const modules = [
   { label: 'Cross-Chain', href: '' },
   { label: 'Network', href: '' },
   { label: 'BTC Layer-2', href: '' },
-  { label: 'AI', href: '' },
   { label: 'RWA', href: '' }
 ]
 
 function ModuleMarket() {
   return (
-    <section className="bg-[url('/home/home6.jpg')] bg-cover bg-center bg-no-repeat pt-[120px] pb-[153px] lg:py-16 lg:px-6">
+    <SectionBgWrapper
+      src="/common/bg6.mp4"
+      poster="/home/home6.jpg"
+      mobileHide={false}
+      className="pt-[120px] pb-[153px] lg:py-16 lg:px-6">
       <div className="wrap">
         <h3 className="text-white text-center text-[40px] leading-[50px] font-medium mb-[72px] lg:text-32 lg:mb-[54px]">
           Module Market
@@ -46,7 +50,7 @@ function ModuleMarket() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionBgWrapper>
   )
 }
 

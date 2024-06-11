@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Video from '@/components/Video'
 import Button from '@/components/Button'
 import WhyNULS from './WhyNULS'
 import Features from './Features'
@@ -15,8 +16,11 @@ export const metadata: Metadata = {
 export default function DevelopersPage() {
   return (
     <>
-      <section className="pt-[250px] pb-[173px] bg-[url('/developers/developers1.jpg')] bg-cover bg-right-bottom bg-no-repeat lg:pt-40 lg:pb-[90px] lg:px-6 lg:bg-none lg:bg-text">
-        <div className="wrap">
+      <section className="relative bg-text pt-[250px] pb-[173px] overflow-hidden lg:pt-40 lg:pb-[90px] lg:px-6">
+        <div className="absolute top-0 right-[-100px] w-[1044px] h-[926px] lg:hidden">
+          <Video src="/developers/bg1.mp4" />
+        </div>
+        <div className="wrap relative">
           <h3 className="w-[620px] text-[56px] leading-[64px] font-medium text-sub lg:text-m-title lg:w-full lg:text-center">
             Build the Project of <span className="text-main">Your Dreams</span>
           </h3>

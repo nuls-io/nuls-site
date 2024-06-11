@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
+import Video from '@/components/Video'
 
 interface ItemProps {
   title: string
@@ -15,9 +16,20 @@ const Item = ({ title, desc, src, className }: ItemProps) => {
         'flex border border-text rounded-lg overflow-hidden lg:flex-col',
         className
       )}>
-      <Image src={src} width={440} height={276} alt="" className="lg:w-full lg:h-[276px]" />
+      <div className="w-[488px] h-[276px] lg:w-full">
+        <Video src={src} />
+      </div>
+      {/* <Image
+        src={src}
+        width={440}
+        height={276}
+        alt=""
+        className="lg:w-full lg:h-[276px]"
+      /> */}
       <div className="flex-1 pt-[40px] pr-[32px] pl-[40px] lg:p-6">
-        <h3 className="text-32 text-main font-bold mb-[18px] lg:text-3xl">{title}</h3>
+        <h3 className="text-32 text-main font-bold mb-[18px] lg:text-3xl">
+          {title}
+        </h3>
         <p className="text-sm">{desc}</p>
       </div>
     </div>
@@ -34,14 +46,13 @@ const items = [
         with no previous blockchain experience. We make it easy for developers
         to create modules for any purpose quickly.
         <br />
-        <br />
-        A firm foundation based on the work of thousands of people means
+        <br />A firm foundation based on the work of thousands of people means
         you don’t have to worry about whether the construction is sustainable.
         So set up your variables and process modules with a view of what is to
         come next, rather than having to keep looking back.
       </>
     ),
-    src: '/about/about2.png'
+    src: '/home/bg4.mov'
   },
   {
     title: 'Microservice Architecture',
@@ -58,13 +69,13 @@ const items = [
         system, microservices are your best bet.
       </>
     ),
-    src: '/about/about3.png',
+    src: '/about/bg1.mp4',
     className: 'my-[18px]'
   },
   {
     title: 'ECO Friendly',
     desc: 'Here at NULS we pride ourselves on being one of the most energy efficient projects in the crypto space with our award winning Proof-of-Credit mechanism which requires very little energy to operate.',
-    src: '/about/about4.png'
+    src: '/common/bg4.mp4'
   }
 ]
 
@@ -72,7 +83,9 @@ function Features() {
   return (
     <section className="py-[130px] bg-sub lg:py-[74px] lg:px-6">
       <div className="wrap">
-        {items.map(item => <Item key={item.title} {...item} />)}
+        {items.map(item => (
+          <Item key={item.title} {...item} />
+        ))}
         {/* <div className="flex border border-text rounded-lg overflow-hidden">
           <Image src="/about/about2.png" width={440} height={276} alt="" />
           <div className="flex-1 pt-[40px] pr-[32px] pl-[40px]">

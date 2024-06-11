@@ -1,4 +1,5 @@
 export const NULSExplorer = 'https://nulscan.io/'
+export const NULSBetaExplorer = 'http://beta.nulscan.io/'
 export const NULSWallet = 'https://github.com/nuls-io/nuls-v2/releases'
 export const NULSStaking = 'https://stake.nuls.io/'
 export const POCM = 'https://pocm.nuls.io/pocm'
@@ -8,6 +9,11 @@ export const GovCouncil = 'https://gov.nuls.io/gov/council'
 export const GovVotingGuide = 'https://docs.nuls.io/Guide/g_governance.html'
 export const GovProposal = 'https://gov.nuls.io/gov/proposal'
 export const GovCreateProposal = 'https://gov.nuls.io/gov/proposal/createProposal'
+
+export const NULSNode = 'https://api.nuls.io/jsonrpc'
+export const NULSNode2 = 'https://sg.api.nuls.io/jsonrpc'
+export const NULSNode3 = 'https://api.nuls.info/jsonrpc'
+export const NULSBetaNode = 'https://beta.api.nuls.io/jsonrpc'
 
 export const NaboxWallet = 'https://nabox.io'
 export const NaboxChrome = 'https://chrome.google.com/webstore/detail/nabox-wallet/nknhiehlklippafakaeklbeglecifhad'
@@ -44,3 +50,6 @@ export const writeProposals = 'https://forum.nuls.io/c/governance/24'
 export const writeAProposal = 'https://forum.nuls.io/c/governance/nuls-proposals'
 
 export const Nulswap = 'https://nulswap.com/'
+
+export const NerveBridge = 'https://bridge.nerve.network/'
+export const SwapBox = 'https://swap.nabox.io/'

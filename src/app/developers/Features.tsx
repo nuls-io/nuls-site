@@ -1,19 +1,21 @@
 import React from 'react'
-import clsx from 'clsx'
+import SectionBgWrapper from '@/components/SectionBgWrapper'
 
-  interface ItemProps {
-    title: string
-    desc: string | React.ReactElement
-    className?: string
-  }
-  const Item = ({ title, desc }: ItemProps) => {
-    return (
-      <div className="h-[313px] bg-[#262628B2] py-8 pl-8 pr-[53px] rounded-lg lg:h-auto lg:p-6">
-        <h3 className="text-2xl text-main font-bold mb-5 lg:text-xl lg:mb-3">{title}</h3>
-        <p className="text-sm text-white">{desc}</p>
-      </div>
-    )
-  }
+interface ItemProps {
+  title: string
+  desc: string | React.ReactElement
+  className?: string
+}
+const Item = ({ title, desc }: ItemProps) => {
+  return (
+    <div className="h-[313px] bg-[#262628B2] py-8 pl-8 pr-[53px] rounded-lg lg:h-auto lg:p-6">
+      <h3 className="text-2xl text-main font-bold mb-5 lg:text-xl lg:mb-3">
+        {title}
+      </h3>
+      <p className="text-sm text-white">{desc}</p>
+    </div>
+  )
+}
 
 const items = [
   {
@@ -55,13 +57,16 @@ const items = [
 
 function Features() {
   return (
-    <section className="py-[133px] bg-[url('/home/home5.jpg')] bg-cover bg-center lg:py-[74px] lg:px-6 lg:bg-none lg:bg-text">
+    <SectionBgWrapper
+      src="/common/bg3.mp4"
+      className="py-[133px] lg:py-[74px] lg:px-6">
+      <div className="abs-full z-[-1] bg-text opacity-70"></div>
       <div className="wrap grid grid-cols-3 gap-6 lg:grid-cols-1">
         {items.map(item => (
           <Item key={item.title} {...item} />
         ))}
       </div>
-    </section>
+    </SectionBgWrapper>
   )
 }
 

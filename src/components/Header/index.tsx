@@ -55,8 +55,7 @@ export default function Header() {
               <MenuItem href="/about" label="About" borderRight={true} />
               <SubMenu label="Solutions" borderRight={true}>
                 <MenuItem
-                  href=""
-                  onClick={() => alert('Coming soon')}
+                  href="/chain-box"
                   label="ChainBox"
                   borderBottom={true}
                 />
@@ -67,9 +66,8 @@ export default function Header() {
                   borderBottom={true}
                 />
                 <MenuItem
-                  href=""
+                  href="/btc-layer2"
                   label="BTC Layer-2"
-                  onClick={() => alert('Coming soon')}
                   borderBottom={true}
                 />
                 <MenuItem href="/module-market" label="Module Market" />
@@ -88,6 +86,7 @@ export default function Header() {
                 <MenuItem href="/wallets" label="Wallets" borderBottom={true} />
                 <MenuItem href="/sco" label="SCO" borderBottom={true} />
                 <MenuItem href="/earn" label="Earn" borderBottom={true} />
+                <MenuItem href="/nuls" label="NULS" borderBottom={true} />
                 <MenuItem href="/enuls" label="ENULS" />
               </SubMenu>
               <MenuItem
@@ -150,9 +149,8 @@ export default function Header() {
                   borderBottom={true}
                 />
                 <MenuItem
-                  href=""
+                  href="/btc-layer2"
                   label="BTC Layer-2"
-                  onClick={() => alert('Coming soon')}
                   borderBottom={true}
                 />
                 <MenuItem href="/module-market" label="Module Market" />
@@ -171,6 +169,7 @@ export default function Header() {
                 <MenuItem href="/wallets" label="Wallets" borderBottom={true} />
                 <MenuItem href="/sco" label="SCO" borderBottom={true} />
                 <MenuItem href="/earn" label="Earn" borderBottom={true} />
+                <MenuItem href="/nuls" label="NULS" borderBottom={true} />
                 <MenuItem href="/enuls" label="ENULS" />
               </SubMenu>
               <MenuItem

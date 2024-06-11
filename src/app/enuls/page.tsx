@@ -1,8 +1,17 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import SectionBgWrapper from '@/components/SectionBgWrapper'
 import Button from '@/components/Button'
 import InteractWithENULS from './InteractWithENULS'
-import { ChainList, ENULSBetaExplorer, ENULSBetaSNode, ENULSExplorer, ENULSFaucet, ENULSNode, ENULSNode2 } from '@/constants/links'
+import {
+  ChainList,
+  ENULSBetaExplorer,
+  ENULSBetaSNode,
+  ENULSExplorer,
+  ENULSFaucet,
+  ENULSNode,
+  ENULSNode2
+} from '@/constants/links'
 
 export const metadata: Metadata = {
   title: 'ENULS - EVM on NULS',
@@ -13,7 +22,9 @@ export const metadata: Metadata = {
 export default function ENULSPage() {
   return (
     <>
-      <section className="pt-[162px] pb-[86px] bg-[url('/enuls/enuls1.jpg')] bg-center bg-cover bg-no-repeat lg:pt-[160px] lg:pb-[60px] lg:px-6">
+      <SectionBgWrapper
+        className="pt-[162px] pb-[86px] lg:pt-[160px] lg:pb-[60px] lg:px-6"
+        src="/common/bg4.mp4">
         <div className="wrap flex flex-col items-center">
           <h3 className="text-[84px] leading-[96px] font-medium text-center lg:text-m-title">
             What is <br />
@@ -39,7 +50,7 @@ export default function ENULSPage() {
             Arbitrum, Zksync, Tron, etc
           </p>
         </div>
-      </section>
+      </SectionBgWrapper>
 
       <section className="relative h-[716px] lg:h-auto lg:bg-text lg:py-[74px] lg:px-6">
         <div className="absolute top-0 right-0 bottom-0 left-0 flex -z-10 lg:hidden">
@@ -48,7 +59,9 @@ export default function ENULSPage() {
         </div>
         <div className="wrap h-full flex">
           <div className="w-[40%] flex flex-col justify-center lg:w-full">
-            <h4 className="text-xl text-main font-bold lg:text-lg">Now Available</h4>
+            <h4 className="text-xl text-main font-bold lg:text-lg">
+              Now Available
+            </h4>
             <h3 className="text-[40px] leading-[46px] font-medium text-sub pt-[11px] pb-[38px] lg:text-32 lg:pb-[25px]">
               ENULS Mainnet
             </h3>
@@ -57,7 +70,7 @@ export default function ENULSPage() {
                 Network Type: <span className="text-main">Ethereum</span>
               </li>
               <li className="text-sm text-sub">
-                Network Name: <span className="text-main">ENULS</span>
+                Network Name: <span className="text-main">ENULS Mainnet</span>
               </li>
               <li className="text-sm text-sub">
                 Node RPC:{' '}
@@ -109,7 +122,7 @@ export default function ENULSPage() {
               </a>
             </div>
           </div>
-          <div className="flex-1 flex justify-center items-center lg:hidden">
+          <div className="pl-[86px] flex-1 flex justify-center items-center lg:hidden">
             <Image src="/enuls/enuls2.png" width={747} height={441} alt="" />
           </div>
         </div>
@@ -123,7 +136,7 @@ export default function ENULSPage() {
           <div className="w-[42%] h-full bg-text"></div>
         </div>
         <div className="wrap h-full flex">
-          <div className="flex-1 flex justify-center items-center lg:hidden">
+          <div className="pr-[86px] flex-1 flex justify-center items-center lg:hidden">
             <Image src="/enuls/enuls2.png" width={747} height={441} alt="" />
           </div>
           <div className="w-[40%] flex flex-col justify-center pl-[78px] lg:w-full lg:pl-0">
@@ -136,7 +149,7 @@ export default function ENULSPage() {
                 Network Type: <span className="text-main">Ethereum</span>
               </li>
               <li className="text-sm text-sub">
-                Network Name: <span className="text-main">ENULS</span>
+                Network Name: <span className="text-main">ENULS Testnet</span>
               </li>
               <li className="text-sm text-sub">
                 Node RPC:{' '}

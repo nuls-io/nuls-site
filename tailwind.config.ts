@@ -27,6 +27,8 @@ const config: Config = {
     extend: {
       fontSize: {
         '32': ['32px', '40px'],
+        '40': ['40px', '50px'],
+        '56': ['56px', '64px'],
         'm-title': ['40px', '46px']
       },
       backgroundImage: {

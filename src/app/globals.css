@@ -30,6 +30,11 @@ a {
   display: inline-block;
 }
 
+/* fix video black border */
+video {
+  clip-path: inset(0px);
+}
+
 @layer components {
   .wrap {
     @apply w-[1200px] mx-auto lg:w-full;
@@ -39,5 +44,8 @@ a {
   }
   .mobile-wrap {
     @apply lg:pt-[160px] lg:pb-[76px] lg:px-6;
+  }
+  .abs-full {
+    @apply absolute w-full h-full left-0 top-0
   }
 }

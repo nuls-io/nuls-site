@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Video from '@/components/Video'
 import Button from '@/components/Button'
 import { POCM, POCMRegister } from '@/constants/links'
 
@@ -11,7 +12,11 @@ export const metadata: Metadata = {
 export default function SCOPage() {
   return (
     <>
-      <section className="py-[254px] bg-[url('/sco/sco1.jpg')] bg-cover bg-center bg-no-repeat lg:pt-[160px] lg:pb-[110px] lg:px-6 lg:bg-none lg:bg-text">
+      <section className="py-[254px] overflow-hidden lg:pt-[160px] lg:pb-[110px] lg:px-6">
+        <div className="abs-full z-[-1] bg-text"></div>
+        <div className="absolute w-[1833px] h-[1030px] z-[-1] left-10 bottom-[10px] rotate-[20deg]">
+          <Video src="/sco/bg1.mp4" />
+        </div>
         <div className="wrap">
           <h3 className="text-[56px] leading-[64px] font-medium text-sub lg:text-m-title lg:text-center">
             Ready for <br className="lg:hidden" />

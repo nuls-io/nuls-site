@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import SectionBgWrapper from '@/components/SectionBgWrapper'
+import Video from '@/components/Video'
 import Button from '@/components/Button'
 import { ModuleItem } from '../home/ModuleMarket'
 import Features from './Features'
@@ -20,7 +22,11 @@ const modules = [
 export default function AboutPage() {
   return (
     <>
-      <section className="pt-[218px] pb-[120px] bg-[url('/about/about1.jpg')] bg-cover bg-right-bottom bg-no-repeat lg:pt-40 lg:pb-[90px] lg:px-6 lg:bg-right">
+      <section className="relative pt-[218px] pb-[120px] overflow-hidden lg:pt-40 lg:pb-[90px] lg:px-6">
+        <div className="abs-full bg-sub z-[-1]"></div>
+        <div className="absolute z-[-1] w-[1548px] h-[870px] top-[-35px] right-[-400px]">
+          <Video src="/common/bg2.mp4" />
+        </div>
         <div className="wrap">
           <h1 className="w-[619px] text-[56px] leading-[64px] font-medium lg:w-full lg:text-m-title lg:text-center">
             Making It Easier To <span className="text-special">Innovate</span>
@@ -34,11 +40,15 @@ export default function AboutPage() {
             chains, reduce development costs, and accelerate blockchain business
             application landing.
           </p>
-          <Button href={GetInTouch} className="lg:w-full lg:py-2">Talk to an Expert</Button>
+          <Button href={GetInTouch} className="lg:w-full lg:py-2">
+            Talk to an Expert
+          </Button>
         </div>
       </section>
 
-      <section className="py-[140px] bg-[url('/home/home6.jpg')] bg-cover bg-center lg:py-[74px] lg:px-6">
+      <SectionBgWrapper
+        src="/common/bg6.mp4"
+        className="py-[140px] lg:py-[74px] lg:px-6">
         <div className="wrap">
           <h3 className="text-sub text-center text-[40px] leading-[50px] font-medium mb-12 lg:text-32 lg:mb-8">
             The Perfect Foundation
@@ -59,11 +69,13 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </SectionBgWrapper>
 
       <Features />
 
-      <section className="py-[211px] bg-[url('/about/about5.png')] bg-cover bg-center lg:py-[74px] lg:px-6">
+      <SectionBgWrapper
+        src="/about/bg2.mp4"
+        className="py-[211px] lg:py-[74px] lg:px-6">
         <div className="h-full wrap flex flex-col justify-center items-center">
           <h3 className="text-center text-[40px] leading-[50px] font-medium mb-10 lg:text-32 lg:mb-6">
             Highly Scalable
@@ -77,9 +89,11 @@ export default function AboutPage() {
             starting from scratch.
           </p>
         </div>
-      </section>
+      </SectionBgWrapper>
 
-      <section className="py-[200px] bg-[url('/about/about6.png')] bg-cover bg-center lg:py-[74px] lg:px-6">
+      <SectionBgWrapper
+        src="/common/bg9.mp4"
+        className="py-[200px] lg:py-[74px] lg:px-6">
         <div className="wrap">
           <div className="w-[588px] p-8 bg-sub rounded-lg border border-text lg:w-full lg:p-6">
             <h3 className="text-2xl font-bold mb-5 lg:mb-4">
@@ -108,9 +122,12 @@ export default function AboutPage() {
             </Button>
           </div>
         </div>
-      </section>
+      </SectionBgWrapper>
 
-      <section className="pt-[130px] pb-[116px] bg-[url('/home/home5.jpg')] bg-cover bg-center lg:py-[74px] lg:px-6">
+      <SectionBgWrapper
+        src="/common/bg3.mp4"
+        className="pt-[130px] pb-[116px] lg:py-[74px] lg:px-6">
+        <div className="abs-full z-[-1] bg-text opacity-70"></div>
         <div className="h-full wrap flex flex-col justify-center items-center">
           <h3 className="w-[782px] text-white text-[40px] leading-[50px] font-medium mb-10 lg:w-full lg:text-32 lg:text-center lg:mb-6">
             The NULS Platform Is An A-list Team That Stands Behind Yours
@@ -123,7 +140,7 @@ export default function AboutPage() {
             Get in Touch
           </Button>
         </div>
-      </section>
+      </SectionBgWrapper>
     </>
   )
 }

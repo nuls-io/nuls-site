@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import SectionBgWrapper from '@/components/SectionBgWrapper'
+import Video from '@/components/Video'
 import Button from '@/components/Button'
 import EarnNULS from './EarnNULS'
 import FundProject from './FundProject'
@@ -21,7 +23,11 @@ export const metadata: Metadata = {
 export default function EarnPage() {
   return (
     <>
-      <section className="pt-[237px] pb-[230px] bg-[url('/earn/earn1.jpg')] bg-center bg-cover bg-no-repeat lg:pt-[160px] lg:pb-[90px] lg:px-6 lg:bg-none lg:bg-sub">
+      <section className="relative pt-[237px] pb-[230px] overflow-hidden lg:pt-[160px] lg:pb-[90px] lg:px-6 lg:bg-none lg:bg-sub">
+        <div className="absolute z-[-1] w-full h-full top-0 left-0 bg-sub"></div>
+        <div className="absolute top-[-200px] right-[-220px] w-[1355px] h-[1275px] z-[-1]">
+          <Video src="/earn/bg1.mp4" />
+        </div>
         <div className="wrap">
           <h1 className="w-[535px] text-[56px] leading-[64px] font-medium lg:w-full lg:text-m-title lg:text-center">
             Proof <br className="lg:hidden" />
@@ -120,7 +126,11 @@ export default function EarnPage() {
 
       <FundProject />
 
-      <section className="py-[132px] bg-[url('/home/home5.jpg')] bg-cover bg-center bg-no-repeat lg:py-[74px] lg:px-6">
+      <SectionBgWrapper
+        src="/common/bg3.mp4"
+        poster="/home/home5.jpg"
+        className="py-[132px] lg:py-[74px] lg:px-6">
+        <div className="abs-full z-[-1] bg-text opacity-70"></div>
         <div className="wrap flex flex-col justify-center items-center">
           <h3 className="text-center text-sub text-[40px] leading-[50px] font-medium lg:text-32">
             Operating a NULS Node
@@ -128,7 +138,12 @@ export default function EarnPage() {
           <p className="w-[484px] text-center text-sub text-sm mt-[48px] mb-[72px] lg:w-full lg:my-10">
             Node operation requires use of the full node wallet. Operate a NULS
             Masternode or have one hosted by our partners at{' '}
-            <a href="https://nodeforge.io/" target="_blank" className="underline underline-offset-2">NodeForge.io</a>
+            <a
+              href="https://nodeforge.io/"
+              target="_blank"
+              className="underline underline-offset-2">
+              NodeForge.io
+            </a>
           </p>
           <div className="lg:w-full">
             <Button
@@ -147,7 +162,7 @@ export default function EarnPage() {
             </Button> */}
           </div>
         </div>
-      </section>
+      </SectionBgWrapper>
     </>
   )
 }

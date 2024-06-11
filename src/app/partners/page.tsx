@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import clsx from 'clsx'
+import SectionBgWrapper from '@/components/SectionBgWrapper'
 
 export const metadata: Metadata = {
   title: 'Partners - Trusted by our partners and collaborators',
@@ -88,7 +89,7 @@ export default function PartnersPage() {
     { src: '/partners/cross-chain-support/Pulse.svg', href: '' },
     { src: '/partners/cross-chain-support/FREECASH.svg', href: '' },
     { src: '/partners/cross-chain-support/HECO.svg', href: '' },
-    
+
     { src: '/partners/cross-chain-support/NERVE.svg', href: '' }
   ]
   const partners = [
@@ -106,13 +107,17 @@ export default function PartnersPage() {
   ]
   return (
     <>
-      <section className="pt-[313px] pb-[275px] bg-[url('/partners/partners1.jpg')] bg-center bg-cover bg-no-repeat lg:pt-[160px] lg:pb-[120px] lg:px-6">
+      <SectionBgWrapper
+        src="/common/bg5.mov"
+        poster="/partners/partners1.jpg"
+        className="pt-[313px] pb-[275px] lg:pt-[160px] lg:pb-[120px] lg:px-6">
+        <div className="absolute w-full h-full top-0 left-0 bg-text opacity-40 z-[-1]"></div>
         <h3 className="text-center text-[56px] leading-[64px] font-medium text-sub lg:text-m-title">
           Trusted by our
           <br className="lg:hidden" />
           Partners and Collaborators
         </h3>
-      </section>
+      </SectionBgWrapper>
 
       <section className="bg-sub py-[140px] lg:py-[76px] lg:px-6">
         <div className="wrap">

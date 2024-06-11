@@ -1,4 +1,5 @@
 import React from 'react'
+import SectionBgWrapper from '@/components/SectionBgWrapper'
 import Button from '@/components/Button'
 import { GovProposal, GovVotingGuide, writeProposals } from '@/constants/links'
 
@@ -49,13 +50,19 @@ const items = [
 
 function Proposal() {
   return (
-    <section className="bg-text py-[145px] bg-[url('/community/community3.png')] bg-center bg-cover bg-no-repeat lg:py-[74px] lg:px-6 lg:bg-none lg:bg-text">
+    <SectionBgWrapper
+      src="/common/bg7.mp4"
+      poster="/community/community3.png"
+      className="py-[145px] lg:py-[74px] lg:px-6">
+      <div className="abs-full bg-text z-[-1] opacity-60"></div>
       <div className="wrap">
         <div className="grid grid-cols-3 gap-[25px] lg:grid-cols-1 lg:gap-4">
-          {items.map(item => <Item key={item.title} {...item} />)}
+          {items.map(item => (
+            <Item key={item.title} {...item} />
+          ))}
         </div>
       </div>
-    </section>
+    </SectionBgWrapper>
   )
 }
 

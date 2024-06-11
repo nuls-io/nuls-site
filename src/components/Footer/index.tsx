@@ -5,8 +5,6 @@ import {
   Blog,
   Youtube,
   Forum,
-  NULSExplorer,
-  ENULSExplorer,
   Github,
   BrandAssets,
   Documentation
@@ -20,7 +18,6 @@ interface IConfig {
 interface IConfigChild {
   label: string
   path: string
-  inner?: boolean
 }
 
 const linkConfig: IConfig[] = [
@@ -50,26 +47,23 @@ const linkConfig: IConfig[] = [
     children: [
       {
         label: 'Wallets',
-        path: '/wallets',
-        inner: true
+        path: '/wallets'
       },
       {
         label: 'Staking',
-        path: '/ecosystem?type=Staking',
-        inner: true
+        path: '/ecosystem?type=Staking'
       },
       {
         label: 'SCO Platform',
-        path: '/sco',
-        inner: true
+        path: '/sco'
       },
       {
         label: 'NULS Explorer',
-        path: NULSExplorer
+        path: '/nuls'
       },
       {
         label: 'ENULS Explorer',
-        path: ENULSExplorer
+        path: '/enuls'
       }
     ]
   },
@@ -95,18 +89,15 @@ const linkConfig: IConfig[] = [
     children: [
       {
         label: 'Partners',
-        path: '/partners',
-        inner: true
+        path: '/partners'
       },
       {
         label: 'Roadmap',
-        path: '/roadmap',
-        inner: true
+        path: '/roadmap'
       },
       {
         label: 'Community',
-        path: '/community',
-        inner: true
+        path: '/community'
       }
     ]
   }
@@ -125,7 +116,7 @@ export default function Footer() {
           </div>
         )
       }
-      return item.inner ? (
+      return item.path.startsWith('/') ? (
         <Link
           key={item.label}
           className="text-label text-sm mb-2 duration-300 hover:text-main"
@@ -144,6 +135,7 @@ export default function Footer() {
     })
   }
 
+  // Thank You! We’ve received your submission!
   return (
     <>
       <section className="py-[95px] bg-main lg:py-[54px]">

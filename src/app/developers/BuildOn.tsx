@@ -1,6 +1,7 @@
 import React from 'react'
+import SectionBgWrapper from '@/components/SectionBgWrapper'
 import Button from '@/components/Button'
-import { NULSExplorer, ENULSExplorer, Documentation, ENULSDoc } from '@/constants/links'
+import { Documentation, ENULSDoc } from '@/constants/links'
 
 interface ItemProps {
   title: string
@@ -45,27 +46,29 @@ const items: ItemProps[] = [
     title: 'Build on NULS',
     desc: 'Join the thriving ecosystem and grow with NULS. Be a builder, using our dev-friendly tools to build a blockchain you prefer, NULS ChainBox, Modular wear-house will help to achieve your goal. Deploying projects on NULS, and receiving ecosystem grant from the NULS foundation.',
     btnText: 'Explore NULS',
-    link: NULSExplorer,
+    link: '/nuls',
     docLink: Documentation
   },
   {
     title: 'Build on ENULS',
     desc: 'ENULS is the parallel chain of NULS, built on top of the NULS ChainBox solution. ENULS is fully compatible with EVM and Web3 API interfaces and utilizes NULS as the primary asset within its network.',
     btnText: 'Explore ENULS',
-    link: ENULSExplorer,
+    link: '/enuls',
     docLink: ENULSDoc
   }
 ]
 
 function BuildOn() {
   return (
-    <section className="py-[160px] bg-[url('/about/about6.png')] bg-cover bg-right-bottom bg-no-repeat lg:py-[74px] lg:px-6">
+    <SectionBgWrapper
+      src="/common/bg9.mp4"
+      className="py-[160px] lg:py-[74px] lg:px-6">
       <div className="wrap">
         {items.map(item => (
           <Item key={item.title} {...item} />
         ))}
       </div>
-    </section>
+    </SectionBgWrapper>
   )
 }
 

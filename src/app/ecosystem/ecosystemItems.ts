@@ -18,6 +18,13 @@ const items = [
     type: TabType.Wallets
   },
   {
+    src: '/ecosystem/NULS.svg',
+    name: 'NULS Multi-signature',
+    desc: 'NULS Multi-sig is a digital signature that allows multiple users to sign a single transaction within the NULS ecosystem.',
+    link: 'https://docs.nuls.io/Guide/g_multiSignature_dapp_Guide.html ',
+    type: TabType.Wallets
+  },
+  {
     src: '/ecosystem/MetaMask.svg',
     name: 'MetaMask',
     desc: 'MetaMask is the leading self-custodial wallet. The safe and simple way to access blockchain applications and web3. Trusted by millions of users worldwide.',
@@ -47,8 +54,8 @@ const items = [
   },
   {
     src: '/ecosystem/HyperPay.svg',
-    name: 'Hyper Pay',
-    desc: 'Hyper Pay Wallet is a multi-chain cryptocurrency wallet that offers a wide range of services and features for managing digital assets.',
+    name: 'HyperPay',
+    desc: 'HyperPay Wallet is a multi-chain cryptocurrency wallet that offers a wide range of services and features for managing digital assets.',
     link: 'https://www.hyperpay.tech',
     type: TabType.Wallets
   },
@@ -152,13 +159,6 @@ const items = [
     desc: 'Incubated on NULS POCM platform, aleph.im is an open-source off-chain P2P network that decentralized key-value store, file storage, function execution and virtual machine provisioning.',
     link: 'https://aleph.im/ ',
     type: TabType['Infra&Tools']
-  },
-  {
-    src: '/ecosystem/NULS.svg',
-    name: 'NULS Multi-signature',
-    desc: 'NULS Multi-sig is a digital signature that allows multiple users to sign a single transaction within the NULS ecosystem.',
-    link: 'https://docs.nuls.io/Guide/g_multiSignature_dapp_Guide.html ',
-    type: TabType.Wallets
   },
   {
     src: '/ecosystem/NULS.svg',

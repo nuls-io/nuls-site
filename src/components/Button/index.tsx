@@ -44,6 +44,26 @@ const Button: FC<IProps> = props => {
     )
   }
 
+  /* const Component =
+    typeof href === 'string' && !href.startsWith('/') ? 'a' : 'Link'
+
+  return (
+    <Component
+      href={href}
+      target="_blank"
+      className={clsx(
+        'text-center text-text font-bold border rounded-[100px] duration-300 hover:opacity-70',
+        type === 'primary' ? 'bg-main border-main' : 'border-text',
+        px ? px : 'px-12',
+        py ? py : 'py-5',
+        font ? font : 'text-lg',
+        className
+      )}
+      {...rest}>
+      {children || title}
+    </Component>
+  ) */
+
   if (typeof href === 'string' && !href.startsWith('/')) {
     return (
       <a

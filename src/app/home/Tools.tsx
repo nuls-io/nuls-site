@@ -3,6 +3,8 @@
 import React, { FC, useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
+import SectionBgWrapper from '@/components/SectionBgWrapper'
+import Video from '@/components/Video'
 import Button from '@/components/Button'
 import ExpandIcon from '@/components/ExpandIcon'
 import Collapse from '@/components/Collapse'
@@ -33,7 +35,7 @@ const Tool: FC<ITool> = ({ title, src, desc, path, isMobile }) => {
         {!isMobile ? (
           <div
             className={clsx(
-              'flex-1 flex flex-col justify-between overflow-hidden lg:hidden',
+              'flex-1 flex flex-col justify-between overflow-hidden lg:hidden'
             )}>
             <p className="text-sm text-white mt-5 lg:mb-3">{desc}</p>
             <div>
@@ -49,10 +51,7 @@ const Tool: FC<ITool> = ({ title, src, desc, path, isMobile }) => {
           </div>
         ) : (
           <Collapse visible={expand} className="hidden lg:block">
-            <div
-              className={clsx(
-                'flex-1 overflow-hidden',
-              )}>
+            <div className={clsx('flex-1 overflow-hidden')}>
               <p className="text-sm text-white mt-5 mb-3">{desc}</p>
               <div>
                 <Button
@@ -145,7 +144,13 @@ function Tools() {
   const translateXPath = 328 + 24
   const maxCur = tools.length - 1 - 2
   return (
-    <section className="h-[950px] bg-[url('/home/home2.jpg')] bg-center bg-cover bg-no-repeat overflow-hidden lg:bg-text lg:h-auto lg:bg-[url('/home/home2-mobile.png')] lg:bg-top lg:bg-[length:100%_auto] lg:px-6 lg:pb-10">
+    <section
+      // className="h-[950px] bg-[url('/home/home2.jpg')] bg-center bg-cover bg-no-repeat overflow-hidden lg:bg-text lg:h-auto lg:bg-[url('/home/home2-mobile.png')] lg:bg-top lg:bg-[length:100%_auto] lg:px-6 lg:pb-10">
+      className="relative h-[950px] overflow-hidden lg:h-auto lg:px-6 lg:pb-10">
+      <div className="abs-full z-[-1] bg-[#000]"></div>
+      <div className="abs-full z-[-1] lg:h-[50%]">
+        <Video src="/home/bg2.mp4" />
+      </div>
       <div className="pt-[346px] mb-[57px] flex justify-center lg:pt-[192px] lg:mb-[138px]">
         <Image src="/home/home3.png" width={260} height={116} alt="" />
       </div>

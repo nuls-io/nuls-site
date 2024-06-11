@@ -1,6 +1,7 @@
 import React from 'react'
+import SectionBgWrapper from '@/components/SectionBgWrapper'
 import Button from '@/components/Button'
-import { NULSStaking, POCM } from '@/constants/links'
+import { POCM } from '@/constants/links'
 
 interface ItemProps {
   title: string
@@ -35,7 +36,10 @@ const items = [
 
 function FundProject() {
   return (
-    <section className=" py-[140px] bg-[url('/home/home4.png')] bg-cover bg-center bg-no-repeat lg:py-[74px] lg:px-6 lg:bg-none lg:bg-sub">
+    <SectionBgWrapper
+      src="/common/bg1.mp4"
+      poster="/home/home4.png"
+      className="py-[140px] lg:py-[74px] lg:px-6 lg:bg-sub">
       <div className="wrap">
         <h3 className="text-center text-[40px] leading-[50px] font-medium mb-[88px] lg:text-32 lg:mb-10">
           Fund Your Project With
@@ -48,12 +52,16 @@ function FundProject() {
           ))}
         </div>
         <div className="text-center mt-[60px] lg:mt-8">
-          <Button className="w-[252px] lg:w-full" px="px-0" py="py-[14.5px] lg:py-1" href={POCM}>
+          <Button
+            className="w-[252px] lg:w-full"
+            px="px-0"
+            py="py-[14.5px] lg:py-1"
+            href={POCM}>
             Get Started
           </Button>
         </div>
       </div>
-    </section>
+    </SectionBgWrapper>
   )
 }
 

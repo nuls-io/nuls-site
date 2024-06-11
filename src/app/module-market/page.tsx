@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import SectionBgWrapper from '@/components/SectionBgWrapper'
 import { ModuleItem, modules } from '../home/ModuleMarket'
 
 export const metadata: Metadata = {
@@ -7,7 +8,10 @@ export const metadata: Metadata = {
 
 export default function ModuleMarketPage() {
   return (
-    <section className="min-h-screen bg-[url('/home/home6.jpg')] bg-cover bg-center bg-no-repeat pt-[226px] pb-[138px] lg:pt-[160px] lg:pb-[76px] lg:px-6">
+    <SectionBgWrapper
+      src="/common/bg6.mp4"
+      poster="/home/home6.jpg"
+      className="min-h-screen pt-[226px] pb-[138px] lg:pt-[160px] lg:pb-[76px] lg:px-6">
       <div className="wrap">
         <h3 className="text-white text-center text-[56px] leading-[70px] font-medium lg:text-m-title">
           Module Market
@@ -27,6 +31,6 @@ export default function ModuleMarketPage() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionBgWrapper>
   )
 }
