@@ -61,7 +61,7 @@ export default function Header() {
                 />
                 <MenuItem
                   href=""
-                  label="AI"
+                  label="RWA"
                   onClick={() => alert('Coming soon')}
                   borderBottom={true}
                 />
@@ -144,7 +144,7 @@ export default function Header() {
                 />
                 <MenuItem
                   href=""
-                  label="AI"
+                  label="RWA"
                   onClick={() => alert('Coming soon')}
                   borderBottom={true}
                 />

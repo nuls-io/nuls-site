@@ -1,8 +1,8 @@
 export default function LegalDisclaimer() {
   return (
-    <section className="min-h-screen bg-sub pt-[225px]">
+    <section className="min-h-screen bg-sub pt-[225px] lg:pt-[140px] lg:pb-[74px] lg:px-6">
       <div className="wrap">
-        <h3 className="text-[56px] leading-[64px] font-medium text-center mb-[84px]">
+        <h3 className="text-56 font-medium text-center mb-[84px] lg:text-40 lg:mb-12">
           Legal Disclaimer
         </h3>
         <div className="flex justify-center">

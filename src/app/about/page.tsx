@@ -129,10 +129,10 @@ export default function AboutPage() {
         className="pt-[130px] pb-[116px] lg:py-[74px] lg:px-6">
         <div className="abs-full z-[-1] bg-text opacity-70"></div>
         <div className="h-full wrap flex flex-col justify-center items-center">
-          <h3 className="w-[782px] text-white text-[40px] leading-[50px] font-medium mb-10 lg:w-full lg:text-32 lg:text-center lg:mb-6">
-            The NULS Platform Is An A-list Team That Stands Behind Yours
+          <h3 className="w-[782px] text-white text-center text-40 font-medium mb-10 lg:w-full lg:text-32 lg:mb-6">
+            The NULS Platform Is An A-List Team That Stands Behind Yours
           </h3>
-          <p className="w-[484px] text-white text-sm mb-12 lg:w-full lg:text-center lg:mb-8">
+          <p className="w-[484px] text-white text-sm text-center mb-12 lg:w-full lg:mb-8">
             Microservices allows you to scale up much more quickly and allows
             you to organize around business capabilities.
           </p>

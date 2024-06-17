@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Roboto_Mono, Roboto_Flex } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
+import Subscribe from '@/components/Subscribe'
 import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body className={`${rMono.variable} ${rFlex.variable}`}>
         <Header />
         <main className="min-h-screen">{children}</main>
+        <Subscribe />
         <Footer />
       </body>
     </html>

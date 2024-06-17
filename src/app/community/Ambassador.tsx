@@ -13,12 +13,20 @@ const Item = (props: ItemProps) => {
   return (
     <div>
       <div className="border border-text rounded-lg h-[244px] overflow-hidden lg:h-auto">
-        <Image src={img} width={280} height={244} alt="" className="lg:w-full" />
+        <Image
+          src={img}
+          width={280}
+          height={244}
+          alt=""
+          className="lg:w-full"
+        />
       </div>
       <h3 className="font-medium text-sm text-special pt-[26px] pb-[8px] lg:pt-4">
         {position}
       </h3>
-      <h3 className="font-bold text-[22px] leading-[27px] lg:text-lg">{name}</h3>
+      <h3 className="font-bold text-[22px] leading-[27px] lg:text-lg">
+        {name}
+      </h3>
     </div>
   )
 }
@@ -75,6 +83,16 @@ function Ambassador() {
   return (
     <section className="bg-sub pt-[120px] pb-[167px] lg:py-[74px] lg:px-6">
       <div className="wrap">
+        <section className="mb-[108px]  lg:mb-20">
+          <h3 className="text-32 pb-10 font-medium lg:text-2xl lg:pb-6">
+            NULS Councillors
+          </h3>
+          <div className="grid grid-cols-4 gap-x-6 gap-y-[65px] lg:grid-cols-3 sm:grid-cols-2 lg:gap-x-4 lg:gap-y-8">
+            {councillors.map(v => (
+              <Item key={v.name} {...v} />
+            ))}
+          </div>
+        </section>
         <h3 className="text-[40px] leading-[50px] font-medium lg:text-32 lg:text-center">
           NULS Ambassadors
         </h3>
@@ -87,7 +105,11 @@ function Ambassador() {
           your strengths, discuss, and vote for your proposal.
         </p>
         <div className="pb-[64px] lg:pb-10">
-          <Button href={writeAProposal} px="px-[52px]" py="py-[14.5px] lg:py-1" className="lg:w-full">
+          <Button
+            href={writeAProposal}
+            px="px-[52px]"
+            py="py-[14.5px] lg:py-1"
+            className="lg:w-full">
             Write a Proposal
           </Button>
         </div>
@@ -98,16 +120,10 @@ function Ambassador() {
             ))}
           </div>
         </section>
-        <section className="mb-[108px]  lg:mb-20">
-          <h3 className="text-32 pb-10 font-medium lg:text-2xl lg:pb-6">NULS Councillors</h3>
-          <div className="grid grid-cols-4 gap-x-6 gap-y-[65px] lg:grid-cols-3 sm:grid-cols-2 lg:gap-x-4 lg:gap-y-8">
-            {councillors.map(v => (
-              <Item key={v.name} {...v} />
-            ))}
-          </div>
-        </section>
         <section>
-          <h3 className="text-32 pb-10 font-medium lg:text-2xl lg:pb-6">Global Team</h3>
+          <h3 className="text-32 pb-10 font-medium lg:text-2xl lg:pb-6">
+            Global Team
+          </h3>
           <div className="grid grid-cols-4 gap-x-6 gap-y-[65px] lg:grid-cols-3 sm:grid-cols-2 lg:gap-x-4 lg:gap-y-8">
             {globalTeams.map(v => (
               <Item key={v.name} {...v} />

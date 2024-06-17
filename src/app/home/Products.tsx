@@ -58,7 +58,7 @@ const products = [
     title: 'NULS ChainBox',
     src: '/common/bg5.mov',
     desc: 'NULS ChainBox solution provides developers an extensive suite of tools used to build highly customized blockchains choosing modules from a common repository, modifying them, or even adding new ones.',
-    path: '/enuls'
+    path: '/chain-box'
   },
   {
     title: 'NULS SCO',
