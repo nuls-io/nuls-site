@@ -63,10 +63,10 @@ export default function PartnersPage() {
     { src: '/partners/cross-chain-support/TRON.svg', href: '' },
     { src: '/partners/cross-chain-support/Metis.svg', href: '' },
     { src: '/partners/cross-chain-support/IoTeX.svg', href: '' },
-    { src: '/partners/cross-chain-support/Klaytn.svg', href: '' },
+    { src: '/partners/cross-chain-support/KAIA.svg', href: '' },
     { src: '/partners/cross-chain-support/smartBCH.svg', href: '' },
     { src: '/partners/cross-chain-support/Op.svg', href: '' },
-    { src: '/partners/cross-chain-support/kava.svg', href: '' },
+    { src: '/partners/cross-chain-support/KAVA.svg', href: '' },
     { src: '/partners/cross-chain-support/EthereumPoW.svg', href: '' },
     { src: '/partners/cross-chain-support/ENULS.svg', href: '' },
     { src: '/partners/cross-chain-support/REI.svg', href: '' },
@@ -90,7 +90,8 @@ export default function PartnersPage() {
     { src: '/partners/cross-chain-support/FREECASH.svg', href: '' },
     { src: '/partners/cross-chain-support/HECO.svg', href: '' },
 
-    { src: '/partners/cross-chain-support/NERVE.svg', href: '' }
+    { src: '/partners/cross-chain-support/NERVE.svg', href: '' },
+    { src: '/partners/cross-chain-support/BCH.svg', href: '' }
   ]
   const partners = [
     { title: 'Investers', items: investors },
