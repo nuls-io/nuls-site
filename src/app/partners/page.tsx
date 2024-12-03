@@ -66,7 +66,7 @@ export default function PartnersPage() {
     { src: '/partners/cross-chain-support/KAIA.svg', href: '' },
     { src: '/partners/cross-chain-support/smartBCH.svg', href: '' },
     { src: '/partners/cross-chain-support/Op.svg', href: '' },
-    { src: '/partners/cross-chain-support/KAVA.svg', href: '' },
+    { src: '/partners/cross-chain-support/Kava.svg', href: '' },
     { src: '/partners/cross-chain-support/EthereumPoW.svg', href: '' },
     { src: '/partners/cross-chain-support/ENULS.svg', href: '' },
     { src: '/partners/cross-chain-support/REI.svg', href: '' },
