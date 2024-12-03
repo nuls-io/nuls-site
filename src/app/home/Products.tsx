@@ -1,4 +1,6 @@
-import React, { FC } from 'react'
+'use client'
+
+import React, { FC, useEffect, useState, useRef } from 'react'
 import SectionBgWrapper from '@/components/SectionBgWrapper'
 import Video from '@/components/Video'
 import Image from 'next/image'
@@ -12,7 +14,7 @@ type IProduct = {
 }
 const Product: FC<IProduct> = ({ title, src, desc, path }) => {
   return (
-    <div className="bg-sub border border-text rounded-lg overflow-hidden">
+    <div className="bg-sub border border-text rounded-lg overflow-hidden w-[384px] flex-shrink-0 lg:w-full">
       <div className="relative">
         <div className="h-[276px]">
           <Video src={src} />
@@ -49,6 +51,12 @@ const Product: FC<IProduct> = ({ title, src, desc, path }) => {
 
 const products = [
   {
+    title: 'NULS AI ',
+    src: '/home/bg5.mp4',
+    desc: 'The AI identity network that unlocks and enhances the value of AI data.',
+    path: '/nuls-ai'
+  },
+  {
     title: 'ENULS',
     src: '/home/bg3.mov',
     desc: 'ENULS, initiated by the NULS community, is a blockchain that is fully compatible with EVM and Web3 API interfaces.',
@@ -68,7 +76,41 @@ const products = [
   }
 ]
 
+const cardWitdth = 384
+const gap = 24
 function Products() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isTransition, setIsTransition] = useState(false)
+  const timer = useRef<number>()
+  const container = useRef<HTMLDivElement>(null)
+  const extendCards = [...products, ...products]
+  const start = () => {
+    timer.current = window.setInterval(() => {
+      if (!isTransition) {
+        setIsTransition(true)
+        setCurrentIndex(current => current + 1)
+      }
+    }, 3000)
+  }
+  const clear = () => {
+    if (timer.current) {
+      clearInterval(timer.current)
+    }
+  }
+  useEffect(() => {
+    start()
+    return clear
+  }, [])
+  const onTransitionEnd = () => {
+    setIsTransition(false)
+    if (currentIndex === products.length) {
+      container.current!.style.transition = 'none'
+      setCurrentIndex(0)
+      setTimeout(() => {
+        container.current!.style.transition = ''
+      }, 100)
+    }
+  }
   return (
     <SectionBgWrapper
       src="/common/bg1.mp4"
@@ -77,7 +119,24 @@ function Products() {
         <h3 className="text-center text-[40px] leading-[50px] font-medium mb-[96px] lg:text-32 lg:mb-10">
           Products to help you invent
         </h3>
-        <div className="grid grid-cols-3 gap-6 lg:grid-cols-1">
+
+        <div className="overflow-hidden lg:hidden">
+          <div
+            ref={container}
+            className="wrap flex gap-6 transition-transform duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${currentIndex * (cardWitdth + gap)}px)`
+            }}
+            onTransitionEnd={onTransitionEnd}
+            onMouseOver={clear}
+            onMouseLeave={start}>
+            {extendCards.map((v, i) => (
+              <Product key={i} {...v} />
+            ))}
+          </div>
+        </div>
+
+        <div className="hidden gap-6 lg:grid lg:grid-cols-1">
           {products.map(v => (
             <Product key={v.title} {...v} />
           ))}

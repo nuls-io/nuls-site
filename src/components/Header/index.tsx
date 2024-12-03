@@ -60,9 +60,8 @@ export default function Header() {
                   borderBottom={true}
                 />
                 <MenuItem
-                  href=""
-                  label="RWA"
-                  onClick={() => alert('Coming soon')}
+                  href="/nuls-ai"
+                  label="NULS AI"
                   borderBottom={true}
                 />
                 <MenuItem
@@ -136,16 +135,14 @@ export default function Header() {
               <MenuItem href="/about" label="About" borderRight={true} />
               <SubMenu label="Solutions" borderRight={true}>
                 <MenuItem
-                  href=""
-                  onClick={() => alert('Coming soon')}
+                  href="/chain-box"
                   label="ChainBox"
                   borderBottom={true}
                   borderRight={false}
                 />
                 <MenuItem
-                  href=""
-                  label="RWA"
-                  onClick={() => alert('Coming soon')}
+                  href="/nuls-ai"
+                  label="NULS AI"
                   borderBottom={true}
                 />
                 <MenuItem

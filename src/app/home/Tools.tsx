@@ -73,10 +73,10 @@ const Tool: FC<ITool> = ({ title, src, desc, path, isMobile }) => {
 
 const tools = [
   {
-    title: 'RWA',
+    title: 'NULS AI',
     src: '/home/icon-AI.png',
-    desc: 'Developed in 2017, NULS is an industry pioneer. The ecosystem’s expansion to focus on .',
-    path: '/'
+    desc: 'The AI identity network that unlocks and enhances the value of AI data.',
+    path: '/nuls-ai'
   },
   {
     title: 'Earn',

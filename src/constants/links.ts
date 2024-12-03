@@ -34,7 +34,7 @@ export const Youtube = 'https://www.youtube.com/@NULSBlockchain'
 export const Forum = 'https://forum.nuls.io/'
 
 export const Github = 'https://github.com/nuls-io'
-export const BrandAssets = 'https://nuls.io/brand-assets'
+export const BrandAssets = 'https://drive.google.com/drive/folders/1A9vgkGtNSSUmha6lZ1T_0P9SlRTOOmOJ'
 export const Documentation = 'https://docs.nuls.io/'
 export const ENULSDoc = 'https://docs.nuls.io/ENULS/'
 
@@ -52,4 +52,4 @@ export const writeAProposal = 'https://forum.nuls.io/c/governance/nuls-proposals
 export const Nulswap = 'https://nulswap.com/'
 
 export const NerveBridge = 'https://bridge.nerve.network/'
-export const SwapBox = 'https://swap.nabox.io/'
+export const SwapBox = 'https://swapbox.io/bridge'

@@ -11,20 +11,23 @@ function Subscribe() {
     console.log(inputRef.current?.value, 234234)
     event.preventDefault()
     if (!inputRef.current?.value) return
-    const fetchResult: any = await fetch('https://sys.nuls.io/api/subscription', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        source: 'nuls.io', //location.hostname,
-        email: inputRef.current?.value
-      })
-    })
-    const result = await fetchResult.json();
+    const fetchResult: any = await fetch(
+      'https://sys.nuls.io/api/subscription',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          source: 'nuls.io', //location.hostname,
+          email: inputRef.current?.value
+        })
+      }
+    )
+    const result = await fetchResult.json()
     if (result.code === 0) {
       setSubscribed(true)
-    }    
+    }
   }
   return (
     <section className="py-[95px] bg-main lg:py-[54px]">
@@ -49,11 +52,11 @@ function Subscribe() {
               required
               type="email"
               placeholder="Email Address"
-              className="placeholder:text-text outline-0 border border-text rounded-lg px-6 py-4 bg-[transparent] text-2xl font-semibold mr-[14px] lg:w-full lg:text-xl lg:rounded-[54px] lg:mr-0 lg:mb-[14px]"
+              className="placeholder:text-text outline-0 border border-text rounded-lg px-6 py-4 bg-[transparent] text-2xl font-semibold mr-[14px] lg:w-full lg:text-xl lg:rounded-[54px] lg:mr-0 lg:mb-[14px] lg:py-[10px]"
             />
             <button
               type="submit"
-              className="h-[64px] leading-[64px] bg-text rounded-lg text-center text-xl text-main px-[35px] cursor-pointer hover:opacity-70 lg:w-full lg:text-[20px] lg:rounded-[54px]">
+              className="h-[64px] leading-[64px] bg-text rounded-lg text-center text-xl text-main px-[35px] cursor-pointer hover:opacity-70 lg:w-full lg:text-[20px] lg:rounded-[54px] lg:h-12 lg:leading-4">
               Sign Up
             </button>
           </form>

@@ -27,12 +27,12 @@ const features = [
   {
     title: 'Building Module',
     desc: 'Create or improve a module to customize your blockchain according to the standard interface provided by the NULS microservice framework. It allows you to implement some of the functions you want directly at the blockchain protocol layer instead of the smart contract layer.',
-    link: ''
+    link: 'https://docs.nuls.io/Docs/d_network.html#overall-description'
   },
   {
     title: 'Building Chain',
     desc: 'Use the Module Market provided by ChainBox to create your blockchain efficiently, including browser and light wallet. Blockchain built using NULS ChainBox tech will also be supported by Nabox Wallet.',
-    link: ''
+    link: 'https://docs.nuls.io/Docs/c_chain_box.html'
   }
 ]
 

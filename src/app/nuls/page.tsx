@@ -118,10 +118,10 @@ export default function NULSPage() {
           </h3>
           <p className="w-[400px] text-sm mt-8 mb-11 text-center lg:w-full">
             NULS Desktop Wallet or Nabox Wallet, are both compatible with NULS
-            blockchain
+            blockchain.
           </p>
           <div>
-            <Button href={NULSWallet} className="w-[300px]" py="py-[15.5px]">
+            <Button href="/wallets" className="w-[300px]" py="py-[15.5px]">
               Wallets
             </Button>
           </div>

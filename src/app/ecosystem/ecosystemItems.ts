@@ -2,6 +2,37 @@
 
 import { TabType } from './Tabs'
 
+const iii = [
+  {
+    src: '/ecosystem/TIPTAG.svg',
+    name: 'TipTag',
+    desc: 'A Pump social token distribution game',
+    link: 'https://enuls.tiptag.social/',
+    type: TabType.Gaming
+  },
+  {
+    src: '/ecosystem/NFTS2ME.svg',
+    name: 'NFTs2Me',
+    desc: "NFTs2Me is the most powerful and intuitive NFT creation tool, allowing you to launch your NFT project and build a new world on web3. Create your collection using our designer, define its metadata, upload your assets, set an optional price and create/deploy your contract (ERC721 or ERC1155). We'll provide you with a custom minting page as well as a widget.",
+    link: 'https://nfts2me.com/',
+    type: TabType.NFTs
+  },
+  {
+    src: '/ecosystem/Conft.svg',
+    name: 'coNFT',
+    desc: "Each completed task on various chains grants you a Mystery Box.By collecting boxes you are ensuring eligibility to receive rewards from conft.",
+    link: 'https://conft.app/',
+    type: TabType.NFTs
+  },
+  {
+    src: '/ecosystem/Bridgers.svg',
+    name: 'Bridgers',
+    desc: "Fast, transparent, and diverse cross-chain protocols, seamlessly connecting multiple blockchains and assets, with comprehensive technical support, defining a new generation of decentralized Web3 interactions.",
+    link: "https://bridgers.xyz/",
+    type: TabType.DeFi
+  },
+]
+
 const items = [
   {
     src: '/ecosystem/NULS.svg',
@@ -261,6 +292,34 @@ const items = [
     link: 'https://heroesbattlearena.online/',
     type: TabType.Gaming
   },
+  {
+    src: '/ecosystem/TIPTAG.svg',
+    name: 'TipTag',
+    desc: 'A Pump social token distribution game',
+    link: 'https://enuls.tiptag.social/',
+    type: TabType.Gaming
+  },
+  {
+    src: '/ecosystem/NFTS2ME.svg',
+    name: 'NFTs2Me',
+    desc: "NFTs2Me is the most powerful and intuitive NFT creation tool, allowing you to launch your NFT project and build a new world on web3. ",
+    link: 'https://nfts2me.com/',
+    type: TabType.NFTs
+  },
+  {
+    src: '/ecosystem/Conft.svg',
+    name: 'coNFT',
+    desc: "Each completed task on various chains grants you a Mystery Box.By collecting boxes you are ensuring eligibility to receive rewards from conft.",
+    link: 'https://conft.app/',
+    type: TabType.NFTs
+  },
+  {
+    src: '/ecosystem/Bridgers.svg',
+    name: 'Bridgers',
+    desc: "Fast, transparent, and diverse cross-chain protocols, seamlessly connecting multiple blockchains and assets, with comprehensive technical support, defining a new generation of decentralized Web3 interactions.",
+    link: "https://bridgers.xyz/",
+    type: TabType.DeFi
+  }
 ]
 
 export default items

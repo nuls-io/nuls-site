@@ -76,7 +76,7 @@ const linkConfig: IConfig[] = [
       },
       {
         label: 'Brand Assets',
-        path: BrandAssets
+        path: '/brand-assets'
       },
       {
         label: 'Documentation',

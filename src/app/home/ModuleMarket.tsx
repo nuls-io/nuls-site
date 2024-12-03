@@ -30,7 +30,7 @@ export const modules = [
   { label: 'Cross-Chain', href: '' },
   { label: 'Network', href: '' },
   { label: 'BTC Layer-2', href: '' },
-  { label: 'RWA', href: '' },
+  // { label: 'RWA', href: '' },
   { label: 'AMM/DEX', href: '' },
   { label: 'Multi-Routing', href: '' },
 ]

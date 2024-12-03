@@ -28,7 +28,7 @@ export default function BTCLayer2Page() {
             <p className="w-[515px] text-sm text-sub mt-8 lg:w-full lg:text-center">
               NULS is a Layer1 blockchain and also a Layer2 extension network of
               Bitcoin. The NULS blockchain interacts with NULS heterogeneous
-              blockchains through  NerveNetwork relay network.
+              blockchains through NerveNetwork relay network.
               <br />
               <br />
               Within the NULS network, BTC/ETH is used as the gas fee for

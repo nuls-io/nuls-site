@@ -38,7 +38,8 @@ export default function AboutPage() {
             underlying architecture, using smart contracts and cross-chain
             technologies, combined with the ability of ChainBox to quickly build
             chains, reduce development costs, and accelerate blockchain business
-            application landing.
+            application landing. NULS also creates an AI identity network that
+            unlocks and enhances the value of AI data.
           </p>
           <Button href={GetInTouch} className="lg:w-full lg:py-2">
             Talk to an Expert
